@@ -1,0 +1,455 @@
+* {
+  margin: 0px;
+  font-family: "Segoe UI", sans-serif; /*Font chữ cho cả trang web*/
+}
+
+.bg-grey {
+  background: #f7f7f7;
+}
+
+/*-----------------Phần chung----------------- */
+.section-title {
+  margin: 40px 0px; /*Margin cho tất cả tiêu đề*/
+}
+
+/* cho độ dài và margin cho phần containers */
+section > .containers {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1170px;
+}
+
+/* tạo dấu gạch đầu dòng */
+.containers-child-certificate li::before,
+.containers-child--strikethrough::before {
+  content: "- ";
+}
+
+/*-----------------Phần Banner----------------- */
+/* css cho ảnh của banner */
+.containers-banner {
+  height: 70vh;
+  position: relative;
+  background-image: linear-gradient(
+      rgba(34, 34, 34, 0.6),
+      rgba(34, 34, 34, 0.6)
+    ),
+    url(/images/banner.jpg);
+  background-size: cover;
+  color: #fff;
+}
+
+/* căn chỉnh nội dung  */
+#banner {
+  width: 100%;
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  line-height: 40px;
+  top: 15%;
+}
+/*-----------------Phần Navigation-----------------*/
+
+/* căn chỉnh phần avatart top,left,border */
+.avatar {
+  position: absolute;
+  border: 10px solid #fff;
+  border-radius: 50%;
+  width: 170px;
+  height: 180px;
+  top: 64%;
+  left: 44%;
+}
+
+/* cho nội chữ căn giữa */
+#nav-bar {
+  text-align: center;
+}
+
+/* cho padding = 0 */
+#nav-bar .containers {
+  padding: 0;
+}
+
+/* cho thẻ a vị trí thứ 2 padding right */
+#nav-bar .containers a:nth-child(2) {
+  padding-right: 120px;
+}
+
+/* cho thẻ a vị trí thứ 4 padding right */
+#nav-bar .containers a:nth-child(4) {
+  padding-left: 120px;
+}
+
+/* css cho thẻ a */
+#nav-bar .containers a {
+  padding: 30px;
+  border-right: 1px solid #bbb;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #000;
+  font-weight: 500;
+}
+
+/* căn chỉnh padding right cho thẻ i chứa icon */
+#nav-bar .containers a i {
+  padding-right: 5px;
+  color: #199cdb;
+}
+
+/* Cho thẻ a đầu tiên là border left */
+#nav-bar .containers a:first-child {
+  border-left: 1px solid #bbb;
+}
+
+/*-----------------Phần mục tiêu / thông tin-----------------*/
+
+#about {
+  margin-bottom: 40px;
+}
+
+#target {
+  background-color: #f5f5f5;
+}
+
+/* căn chỉnh 2 cột và width 100% */
+.grid-2-col-1,
+#about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+}
+
+/* css phần info padding:0 và xóa gạch đầu dòng cho thẻ ul */
+.info {
+  padding: 0;
+  list-style-type: none;
+}
+
+/* tô đậm chữ và khoảng cách dòng */
+.info li span {
+  font-weight: 600;
+  line-height: 25px;
+}
+
+#target,
+#personal-info {
+  padding: 40px;
+}
+
+/* cho màu nền và block */
+#personal-info {
+  background: #f0f0f0;
+  display: block;
+}
+
+/* padding cho icon social */
+.icon-social {
+  padding: 25px 0px;
+}
+
+/* cho icon social có màu xanh */
+.icon-social i {
+  color: #199cdb;
+}
+
+/*-----------------Phần Kinh nghiệm, học tập,...----------------- */
+/* chỉnh 3 cột và row-gap 30px */
+.grid-3-col-1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  gap: 30px;
+}
+
+.container-1,
+.container-2 {
+  display: flex;
+  column-gap: 30px;
+  justify-content: center;
+  width: 100%;
+}
+
+.grid-3-col .containers {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
+}
+
+/* border cho class */
+.containers-child {
+  padding: 0px 20px 80px 20px;
+  border: 1px solid #bbb;
+  width: 100%;
+}
+
+.containers-child-title {
+  display: flex;
+  margin-top: 40px;
+}
+
+/* cho thẻ h1 80% */
+.containers-child-title h1 {
+  width: 80%;
+  font-size: 35px;
+}
+
+/* cho thẻ i 20%  */
+.containers-child-title i {
+  width: 20%;
+  font-size: 45px;
+}
+
+/* xóa gạch đầu dòng và padding: 0 */
+.containers-child ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* xóa gạch đầu dòng và padding */
+.containers-child ol {
+  list-style-type: none;
+  padding: 6px 0 0 0;
+}
+
+/* tạo dấu tròn màu xanh */
+.containers-child--circle::before {
+  content: "";
+  position: relative;
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #199cdb;
+  left: -30px;
+  top: 21px;
+}
+
+/* css cho dấu tròn */
+.containers-child--circle {
+  padding-left: 30px;
+  margin-top: 20px;
+}
+
+.containers-child--circle p {
+  font-weight: 500;
+}
+
+.containers-child--interest {
+  display: flex;
+  margin-top: 30px;
+}
+
+/* css cho thẻ li thuộc phần sở thích  */
+.containers-child--interest li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+
+/* css cho thẻ i thuộc phần sở thích  */
+.containers-child--interest li i {
+  border: 1.5px solid #199cdb;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #199cdb;
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+.containers-child-step {
+  margin-top: 30px;
+}
+
+/* tô đậm màu chữ  */
+.containers-child-step li {
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+/*  */
+.containers-child-step__color {
+  background: #199cdb;
+  display: inline-block;
+  height: 2px;
+  margin-right: 10px;
+  width: 45px;
+}
+
+/* Phần chứng chỉ giải thưởng */
+
+#certificate {
+  background-color: #f7f7f7;
+}
+
+.containers-child-certificate {
+  display: flex;
+}
+
+#certificate h1 {
+  margin-top: 40px;
+  margin-bottom: 0px;
+  padding-top: 40px;
+}
+
+/* border-bottom cho hàng đầu tiên của chứng chỉ */
+.containers-child-certificate:nth-child(1),
+.containers-child-certificate:nth-child(2) {
+  border-bottom: 2px solid #d6c08d;
+  padding: 40px 0px;
+}
+
+/* padding cho hàng thứ 2 tiên của chứng chỉ */
+.containers-child-certificate:nth-child(3) {
+  padding: 40px 0px;
+}
+
+/* css cho thẻ div phần chứng chỉ */
+.containers-child-certificate div {
+  padding-left: 25px;
+}
+
+/* css cho thẻ p phần chứng chỉ */
+.containers-child-certificate p {
+  font-weight: 500;
+}
+
+/* border-right cho phần chứng chỉ */
+.containers-child--br {
+  border-right: 2px solid #d6c08d;
+  width: 100%;
+  margin-right: 20px;
+}
+
+.containers-child-certificate ul {
+  padding: 0;
+  list-style: none;
+  margin-top: 15px;
+}
+
+/* tạo khoảng cách dòng  */
+.containers-child-certificate ul li {
+  line-height: 20px;
+}
+
+/* căn chỉnh phần ảnh chứng chỉ */
+.containers-child-certificate img {
+  width: 300px;
+  height: 160px;
+}
+
+/* Phần dự án */
+.containers-child-project {
+  display: inline-block;
+  padding: 0;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+/* chỉnh ảnh projetc */
+.containers-child__img {
+  width: 100%;
+  height: 190px;
+  vertical-align: middle; /*làm đầy ảnh*/
+}
+
+/* làm tròn thẻ span và color, padding cho nó */
+.containers-child-project span {
+  background-color: #199cdb;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+
+.project-icon p {
+  margin-bottom: 0px;
+}
+
+/* border top căn giữa cho thẻ div */
+.project-icon {
+  border-top: 1px solid #bbb;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px 0px 20px 15px;
+}
+
+.project-icon div {
+  display: flex;
+}
+
+/* tạo đường viền cho table,tr,td */
+table,
+tr,
+td {
+  border-top: 1px solid #bbb;
+  border-spacing: 0px;
+}
+table {
+  border-collapse: collapse;
+}
+
+td {
+  padding: 10px;
+}
+
+/* gộp đường viền k bị dày */
+td:first-child {
+  width: 30%;
+  vertical-align: baseline;
+}
+
+.containers-child-project i {
+  padding-left: 15px;
+  padding-right: 5px;
+}
+
+/* tô đậm màu chữ */
+.containers-child-project__CV {
+  font-weight: 500;
+  padding: 20px 0px 20px 15px;
+}
+
+/* -----------------Phần Footer----------------- */
+
+#footer {
+  padding: 40px 0px;
+}
+
+/* xóa gạch đầu dòng và chữ căn giữa */
+#footer ul li {
+  list-style: none;
+  margin: 0px 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* chỉnh màu cho icon và kích thước cho nó */
+#footer ul li i {
+  font-size: 30px;
+  color: #199cdb;
+  padding-right: 5px;
+}
+
+/* căn chỉnh thẻ ul */
+#footer ul {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+}
+
+#footer ul li i {
+  font-size: 40px;
+}
+
+#footer .containers ul li p {
+  margin-bottom: 0px;
+}
